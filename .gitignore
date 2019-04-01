@@ -1,0 +1,7 @@
+*.o
+.*.c.swp
+*.c~
+#*#
+geometry1
+*build/
+*bin/
