@@ -1,15 +1,16 @@
-CC=gcc
-CFLAGS=-Wall -Werror 
-EXECUTABLE=geometry1
-SOURCES=prog.c plo.c per.c
-OBJECTS=$(SOURCES:.c=.o)
-.PHONY: clean
-all: $(SOURCES) $(EXECUTABLE)
-	
-$(EXECUTABLE): $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ -lm
+all: main
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@ -lm
+main: prog.o per.o plo.o
+	gcc build/prog.o build/per.o build/plo.o -Wall -Werror -lm  -o bin/geometry1
+
+prog.o: src/prog.c
+	gcc src/prog.c -o build/prog.o -c -Wall -Werror
+
+per.o: src/per.c
+	gcc  src/per.c -o build/per.o -c -Wall -Werror -lm
+
+plo.o: src/plo.c
+	gcc src/plo.c -o build/plo.o -c -Wall -Werror -lm
+
 clean:
-	rm-rf *.o geometry1
+	rm -rf build/*.o bin/geometry1
