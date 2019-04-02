@@ -27,7 +27,7 @@ int main() {
 	struct fig m[n];
 	for (i = 0; i < n; i++) {
 		m[i].nom = i + 1;
-		scanf("%s (%f %f,%f %f,%f %f,%f %f)", &m[i].figure, &m[i].x1,
+		scanf("%s (%f %f,%f %f,%f %f,%f %f)", m[i].figure, &m[i].x1,
 		      &m[i].y1, &m[i].x2, &m[i].y2, &m[i].x3, &m[i].y3,
 		      &m[i].x4, &m[i].y4);
 	}
