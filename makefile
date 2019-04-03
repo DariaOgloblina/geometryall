@@ -14,9 +14,4 @@ plo.o: src/plo.c
 
 clean:
 	rm -rf build/*.o bin/geometry1
-bin:
-	mkdir bin
-
-build:
-	mkdir build
 
