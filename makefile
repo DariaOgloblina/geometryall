@@ -1,8 +1,8 @@
 all: main
+.PHONY: clean
 
 main: prog.o per.o plo.o
 	gcc build/prog.o build/per.o build/plo.o -Wall -Werror -lm  -o bin/geometry1
-
 prog.o: src/prog.c
 	gcc src/prog.c -o build/prog.o -c -Wall -Werror
 
@@ -14,3 +14,9 @@ plo.o: src/plo.c
 
 clean:
 	rm -rf build/*.o bin/geometry1
+bin:
+	mkdir bin
+
+build:
+	mkdir build
+
