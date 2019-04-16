@@ -4,7 +4,7 @@ script:
 - make test
 - cd bin
 - ./geometry_test
-- git ls-files src/ | xargs clang-format -i && git diff —exit-code
+- git ls-files src/ | xargs clang-format -i && git diff --exit-code
 
 compiler: gcc
 
