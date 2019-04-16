@@ -23,7 +23,7 @@ struct fig {
 
 int main()
 {
-    int n, i;
+    int n, k, i;
     printf("enter the number of figures=");
     scanf("%d", &n);
     struct fig m[n];
