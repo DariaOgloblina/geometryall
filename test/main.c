@@ -73,3 +73,37 @@ CTEST(perimetr_testt, resultt_test)
     ASSERT_EQUAL(expected, result);
 }
 
+CTEST(peres_test, peres_false)
+{
+const int k=1;
+const float x1 = 0;
+const float y1 = 6;
+const float r1 = 2;
+const float x2 = 7;
+const float y2 = 6;
+const float r2 = 3;
+
+// When
+const double result = peres(k, x1,y1,r1,x2,y2,r2,0,0,0);
+
+// Then
+ASSERT_FALSE(result);
+}
+
+CTEST(peresech_test, peresech_true)
+{
+const int k=1;
+const float x1 = 0;
+const float y1 = 6;
+const float r1 = 2;
+const float x2 = 7;
+const float y2 = 6;
+const float r2 = 5.2;
+
+// When
+const double result = peres(k, x1,y1,r1,x2,y2,r2,0,0,0);
+
+// Then
+ASSERT_TRUE(result);
+}
+
