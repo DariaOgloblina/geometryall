@@ -20,7 +20,7 @@ float per(
         float y3,
         float x4,
         float y4);
-float peres(
+int peres(
         int k,
         float x1,
         float y1,
@@ -30,6 +30,5 @@ float peres(
         float r2,
         float y22,
         float x3,
-        float y3)
-
+        float y3);
 #endif

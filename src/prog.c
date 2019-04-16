@@ -23,7 +23,7 @@ struct fig {
 
 int main()
 {
-    int n, k, i;
+    int n, i,j;
     printf("enter the number of figures=");
     scanf("%d", &n);
     struct fig m[n];
@@ -82,10 +82,11 @@ int main()
                       m[i].y3,
                       m[i].x4,
                       m[i].y4);
-        if (strcmp(m[i].figure, "circle") == 0) {
-            for (j = i + 1; j < n; j++) {if (strcmp(m[i].figure, "circle") {
-                    k
-                            = peres(1,
+        if (strcmp(m[i].figure, "circle")== 0) {
+            for (j = i + 1; j < n; j++) {
+if (strcmp(m[i].figure, "circle")) {
+                   
+                    if (peres(1,
                                     m[i].x1,
                                     m[i].y1,
                                     m[i].x2,
@@ -94,15 +95,14 @@ int main()
                                     m[j].x2,
                                     0,
                                     0,
-                                    0);
-                    if (k) {
+                                    0)) {
                         m[i].r = m[j].nom;
                         m[j].r = m[i].nom;
                     }
 }
 else{
-                    k
-                            = peres(2,
+                   
+                    if (peres(2,
                                     m[i].x1,
                                     m[i].y1,
                                     m[i].x2,
@@ -111,15 +111,15 @@ else{
                                     m[j].x2,
                                     m[j].y2,
                                     m[j].x3,
-                                    m[j].y3, );
-                    if (k) {
+                                    m[j].y3 )) {
                         m[i].r = m[j].nom;
                         m[j].r = m[i].nom;
                     }
-
-            }
+}
+            
             }
         }
+}
         for (i = 0; i < n; i++) {
             if (strcmp(m[i].figure, "circle") == 0)
                 printf("\n %d.%s(%.2f %.2f,%.2f)\n perimeter=%.2f\n "

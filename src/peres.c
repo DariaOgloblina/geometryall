@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-float peres(
+int peres(
         int k,
         float x1,
         float y1,
@@ -14,25 +14,27 @@ float peres(
         float y22,
         float x3,
         float y3)
-{
+{ float r;
+int flag=0;
     switch (k) {
     case 1:
-        double r = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-        if (r1 + r2 >= r && r1 + r >= r2 && r2 + r >= r1)
-            return 1;
-        else
-            return 0;
+         r = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+        if ((r1 + r2 >= r)&& (r1 + r >= r2) && (r2 + r >= r1))
+           flag=1;
         break;
     case 2:
-        double r = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+       r = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
         if (r1 >= r)
-            return 1;
+            flag=1;
         r = sqrt(pow(r2 - x1, 2) + pow(y22 - y1, 2));
         if (r1 >= r)
-            return 1;
+            flag=1;
         r = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+if (r1 >= r)
+            flag=1;
 
-        else return 0;
         break;
     }
+if (flag) return 1;
+else return 0;
 }
