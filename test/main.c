@@ -40,5 +40,20 @@ CTEST(area_testt, resultt_test)
     const float expected = 10;
     ASSERT_EQUAL(expected, result);
 }
+CTEST(perimetr_test, result_test)
+{
+    // Given
+    char figure[10]="circle";
+    const float x1=0;
+    const float y1=0;
+    const float r= 6.5;
+
+    // When
+    const float result = per(figure,x1,y1,r,0,0,0,0,0);
+
+    // Then
+    const float expected = 40.8395;
+    ASSERT_EQUAL(expected, result);
+}
 
 
